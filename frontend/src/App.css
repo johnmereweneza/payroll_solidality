@@ -1,0 +1,162 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #a5d6a7, #81c784);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #052806;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 15px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+/* Form inputs */
+input {
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Loading State */
+.loading {
+  font-size: 1.2rem;
+  color: #888;
+  margin-top: 20px;
+  font-weight: 600;
+  animation: loadingPulse 1.5s infinite;
+}
+
+@keyframes loadingPulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+/* Lock Details */
+.lock-details {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 800px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(5px);
+}
+
+strong {
+  color: #4caf50;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #0ad45e;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .lock-details {
+    width: 100%;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  button {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
